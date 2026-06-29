@@ -228,16 +228,3 @@
 .load-more-btn.is-active {
   display: block;
 }
-
-.end-message {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #2E2F42;
-  margin: 32px auto;
-}
-
-.end-message.is-hidden {
-  display: none;
-}
