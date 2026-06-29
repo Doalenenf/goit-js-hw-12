@@ -39,7 +39,7 @@ export function createGallery(images) {
   if (!galleryElement) return;
 
   const markup = images.map(makeImageCard).join('');
-  galleryElement.innerHTML = markup;
+  galleryElement.insertAdjacentHTML('beforeend', markup);
   lightbox.refresh();
 }
 
@@ -61,5 +61,19 @@ export function hideLoader() {
   const loaderElement = document.querySelector('#loader');
   if (loaderElement) {
     loaderElement.classList.remove('is-active');
+  }
+}
+
+export function showLoadMoreButton() {
+  const btn = document.querySelector('#load-more-btn');
+  if (btn) {
+    btn.classList.add('is-active');
+  }
+}
+
+export function hideLoadMoreButton() {
+  const btn = document.querySelector('#load-more-btn');
+  if (btn) {
+    btn.classList.remove('is-active');
   }
 }
